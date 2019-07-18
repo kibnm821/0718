@@ -28,4 +28,12 @@ router.get('/Navbar2', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/Navbar2.html'));
 });
 
+router.get('/Input', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Input.html'));
+});
+
+router.get('/View/action', function (req, res) {
+    console.log(req.query);
+});
+
 app.use('/', router);
