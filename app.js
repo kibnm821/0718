@@ -32,8 +32,17 @@ router.get('/Input', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/Input.html'));
 });
 
-router.get('/View/action', function (req, res) {
+router.get('/action_page', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/action_page.html'));
+});
+
+router.get('/Input2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Input2.html'));
+});
+
+router.get('/action_page', function (req, res) {
     console.log(req.query);
+    res.send('Request parameters : '+req.query.username+', '+req.query.car)
 });
 
 app.use('/', router);
