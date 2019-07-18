@@ -52,7 +52,7 @@ router.get('/Try1', function (req, res) {
 
 router.get('/Try2', function (req, res) {
     console.log(req.query);
-    res.send('Request email : '+req.query.Select+'<br> Request pwd : '+req.query.SelectA)
+    res.send('Request email : '+req.query.Select+'<br> Request pwd : '+req.query.Custon)
 });
 
 router.get('/Try3', function (req, res) {
