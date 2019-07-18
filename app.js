@@ -36,6 +36,10 @@ router.get('/Input2', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/Input2.html'));
 });
 
+router.get('/Card', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Card.html'));
+});
+
 router.get('/action_page', function (req, res) {
     console.log(req.query);
     res.send('Request parameters : '+req.query.username+', '+req.query.car)
@@ -52,12 +56,25 @@ router.get('/Try1', function (req, res) {
 
 router.get('/Try2', function (req, res) {
     console.log(req.query);
-    res.send('Request email : '+req.query.Select+'<br> Request pwd : '+req.query.Custon)
+    res.send('Request Select : '+req.query.Select+'<br> Request Select : '+req.query.Custon)
 });
 
 router.get('/Try3', function (req, res) {
     console.log(req.query);
     res.send('Request email : '+req.query.email+'<br> Request pwd : '+req.query.pwd+'<br> Request text :'+req.query.text)
+});
+
+router.get('/Try4', function (req, res) {
+    console.log(req.query);
+    res.send('Request SUCCESS : '+req.query.success+'<br> Request ERROR : '+req.query.error)
+});
+
+router.get('/Card2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Card2.html'));
+});
+
+router.get('/Card3', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Card3.html'));
 });
 
 app.use('/', router);
