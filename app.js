@@ -12,9 +12,12 @@ const router = express.Router();
 app.use(express.static('public'))
 
 router.get('/Dropdowns', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/Dropdowns.html'));
+    res.sendFile(path.join(__dirname + '/Views/Dropdowns.html'));
 //__dirname : It will resolve to your project folder.
 });
 
+router.get('/Navbar', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Navbar.html'));
+});
 
 app.use('/', router);
