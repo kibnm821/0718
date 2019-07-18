@@ -32,10 +32,6 @@ router.get('/Input', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/Input.html'));
 });
 
-router.get('/action_page', function (req, res) {
-    res.sendFile(path.join(__dirname + '/Views/action_page.html'));
-});
-
 router.get('/Input2', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/Input2.html'));
 });
@@ -43,6 +39,25 @@ router.get('/Input2', function (req, res) {
 router.get('/action_page', function (req, res) {
     console.log(req.query);
     res.send('Request parameters : '+req.query.username+', '+req.query.car)
+});
+
+router.get('/Try', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/Try.html'));
+});
+
+router.get('/Try1', function (req, res) {
+    console.log(req.query);
+    res.send('Request email : '+req.query.mail+'<br> Request pwd : '+req.query.pwd)
+});
+
+router.get('/Try2', function (req, res) {
+    console.log(req.query);
+    res.send('Request email : '+req.query.Select+'<br> Request pwd : '+req.query.SelectA)
+});
+
+router.get('/Try3', function (req, res) {
+    console.log(req.query);
+    res.send('Request email : '+req.query.email+'<br> Request pwd : '+req.query.pwd+'<br> Request text :'+req.query.text)
 });
 
 app.use('/', router);

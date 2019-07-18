@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <!--js-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+        <!--title-->
+        <title></title>
+    </head>
+
+    <body class="containr">
+        <div class="row justify-content-center">
+            <div class="mt-5 col-5"> <!--1-->
+                <form action="/Try1">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" name="mail" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="pwd" class="form-control" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn border border-secondary bg-transparent">Submit</button>
+                </form>
+            </div>
+            
+            <div class="col-5"><!--2-->
+                <form action="/Try2">
+                    <div class="form-group">
+                        <label for="custom-select">Select list (select one):</label>
+                        <select class="custom-select" name="Select">
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="custom-select">Multiple select list (hold ctrl or shift (or drag with the mouse) to select more than one):</label>
+                        <select class="custom-select" multiple name="Select1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="3">4</option>
+                            <option value="3">5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn border border-secondary bg-transparent">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mt-5 col-5">
+                <form action="/Try3">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text glyphicon glyphicon-user">@</span>
+                            </div>
+                            <input type="email" name="email" class="form-control" placeholder="email">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text glyphicon glyphicon-user">@</span>
+                            </div>
+                            <input type="password" name="pwd" class="form-control" placeholder="password">
+                        </div>
+                            <div class="mt-5 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text glyphicon glyphicon-user">Text</span>
+                                </div>
+                            <input type="text" name="text" class="form-control" placeholder="Additional info">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn border border-secondary bg-transparent">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
